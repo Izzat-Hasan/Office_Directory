@@ -8,6 +8,16 @@ const port = process.env.PORT || 3000
 const majorVersion = 1
 const minorVersion = 2
 
+//k8 and izzy 
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://IzzatHasan:<password>@cluster0.puksi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 // Use Express to publish static HTML, CSS, and JavaScript files that run in the browser. 
 app.use(express.static(__dirname + '/static'))
 
