@@ -7,17 +7,16 @@ var dt = require('./date-time');
 const port = process.env.PORT || 3000
 const majorVersion = 1
 const minorVersion = 2
-const dbName = "OfficeDirectory";
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://lewisTeam:<lewis123>@cluster0.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority";
+const uri = "mongodb+srv://<lewisTeam>:<lewis123>@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
+  console.log("databse working");
   client.close();
 });
-
-
 
 // Use Express to publish static HTML, CSS, and JavaScript files that run in the browser. 
 app.use(express.static(__dirname + '/static'))
