@@ -18,8 +18,8 @@ const client = new MongoClient(url);
          //template for documents V                                                                                                                                                     
         // { name: "", hours: "", roomnumber: "", email: ""}
         const docs = [
-                { name: "Dr. Ray Klump", hours: "Appointment", roomnumber: "N/A", email: "N/A"},
-                { name: "Paul Kim", hours: "Monday, Wednesday, Friday from 12:00pm - 1:00pm" },
+                { name: "Dr. Ray Klump", hours: "Appointment", roomnumber: "N/A", email: "klumpra@lewisu.edu"},
+                { name: "Paul Kim", hours: "Monday, Wednesday, Friday from 12:00pm - 1:00pm", roomnumber: "N/A", email:"kimyo@lewisu.edu"},
                 { name: "Dr. Amanda Harsey", hours: "N/A", roomnumber: "N/A", email: "N/A"},
                 { name: "Tom Dupre", hours: "N/A", roomnumber: "N/A", email: "N/A"},
                 { name: "Gina Martinez", hours: "Tuesday, Thursday from 11:00am - 12:30pm", roomnumber: "AS-130L", email: "N/A"},
