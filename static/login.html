@@ -4,7 +4,7 @@ Resources:  www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Professor Login </title>
+    <title>About</title>
     <link rel="stylesheet" href="style.css">
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -14,9 +14,10 @@ Resources:  www.youtube.com/codinglabyt -->
 
   <div class="sidebar close">
     <div class="logo-details">
-        <i class='bx bxs-plane-alt' ></i>
+        <i class='bx bxs-plane-alt' > </i>
         <!-- Still working on getting lewis logo here-->
       <span class="logo_name">LEWIS</span>
+
     </div>
 
   
@@ -24,7 +25,7 @@ Resources:  www.youtube.com/codinglabyt -->
       <li>
         <!-- link to the login page goes here-->
         <a href="login.html">
-            <i class='bx bxs-log-in'></i>
+            <i class='bx bxs-log-in' ></i>
           <span class="link_name">Login</span>
         </a>
         <ul class="sub-menu blank">
@@ -48,31 +49,46 @@ Resources:  www.youtube.com/codinglabyt -->
         
         <a href="setting.html">
           <i class='bx bx-cog' ></i>
-          <span class="link_name">Setting</span>
+          <span class="link_name">Settings</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
+          <li><a class="link_name" href="#">Settings</a></li>
         </ul>
       </li>
+
       <li>
 
-        <a href="about.html">
-          <i class="bx bx-rocket"></i>
-          <span class="link_name">About</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">About</a></li>
-        </ul>
-      </li>
+      <a href="about.html">
+        <i class="bx bx-rocket"></i>
+        <span class="link_name">About</span>
+      </a>
+      <ul class="sub-menu blank">
+        <li><a class="link_name" href="#">About</a></li>
+      </ul>
     </li>
+  </li>
   
 </ul>
   </div>
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu' ></i>
-      <span class="text">Login</span>
+      <span class="text">Log-in</span>
+
     </div>
+
+    <div class = "card"> 
+      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      <div class="logo"></div>
+      <div class="login-block">
+          <h1>Login</h1>
+          <input type="text" value="" placeholder="Username" id="username" />
+          <input type="password" value="" placeholder="Password" id="password" />
+          <button>Submit</button>
+      </div>
+      </div>
+
+
   </section>
 
   <script src="script.js"></script>
@@ -271,6 +287,102 @@ Resources:  www.youtube.com/codinglabyt -->
       font-size: 26px;
       font-weight: 600;
     }
+    .card {
+  /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+  text-align: center;
+}
+
+/* On mouse-over, add a deeper shadow */
+
+
+
+.logo {
+    width: 213px;
+    height: 36px;
+    margin: 30px auto;
+}
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid #a10d0d;
+    margin: 0 auto;
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #a10d0d;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #a10d0d;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #a10d0d;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: rgb(219, 16, 16);
+}
+
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
     @media (max-width: 420px) {
       .sidebar.close .nav-links li .sub-menu{
         display: none;
