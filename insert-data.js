@@ -31,10 +31,10 @@ const client = new MongoClient(url);
                 { name: "Dr. Sam Aboumar", hours: "N/A", roomnumber: "N/A", email: "oabuomar@lewisu.edu"},
                 { name: "Dr. Mahmood Al-khassaweneh", hours: "N/A", roomnumber: "N/A", email: "malkhassaweneh@lewisu.edu"},
                 { name: "Dr. Dana Dominiak", hours: "N/A", roomnumber: "N/A", email: "dominida@lewisu.edu"},
-                { name: "Margaret Juraco", hours: "N/A", roomnumber: "N/A", email: "juracoma@lewisu.edu"},
                 { name: "Dr. Michael Lewis", hours: "N/A", roomnumber: "N/A", email: "mlewis8@lewisu.edu"},
                 { name: "Dr. Marie Meyer", hours: "N/A", roomnumber: "N/A", email: "mmeyer2@lewisu.edu"},
                 { name: "Dr. Lucien Ngalamou", hours: "N/A", roomnumber: "N/A", email: "ngalamlu@lewisu.edu"},
+                { name: "Michael Smith", hours: "N/A", roomnumber: "N/A", email: "msmith42@lewisu.edu"},
                 { name: "Dr. Safwan Omari", hours: "N/A", roomnumber: "N/A", email: "omarisa@lewisu.edu"},
                 { name: "Dr. Jason Perry", hours: "N/A", roomnumber: "N/A", email: "perryjn@lewisu.edu"},
                 { name: "Eric Pogue", hours: "N/A", roomnumber: "N/A", email: "epogue@lewisu.edu"}
