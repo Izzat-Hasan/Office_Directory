@@ -40,7 +40,7 @@ const client = new MongoClient(url);
                 { name: "Eric Pogue", hours: "N/A", roomnumber: "N/A", email: "epogue@lewisu.edu"}
               ];
 
-// CREATE FUNCTION THAT MAKES THIS DATABASE ALWAYS RUNNNG
+
 //create ADMIN account, and an update database function
 
         // this option prevents additional documents from being inserted if one fails
