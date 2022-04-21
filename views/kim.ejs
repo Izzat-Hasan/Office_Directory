@@ -16,18 +16,20 @@
             <th scope="col">hours</th>
             <th scope="col">email</th>
             <th scope="col">phone</th>
+            <th scope="col">roomnumber</th>
+            <th scope="col">website</th>
           </tr>
         </thead>
         <tbody>
-        <%professorsList.forEach(professor => {%>
-            <tr>
-                <th scope="row"><%= professor._id %></th>
-                <td><%= professor.name %></td>
-                <td><%= professor.hours %></td>
-                <td><%= professor.email %></td>
-                <td><%= professor.phone %></td>
-            </tr>
-        <%})%>
+            
+
+          <%professorsList.forEach(professor => {%>
+          <tr>
+             
+              <td><%= professor.hours %></td>
+
+          </tr>
+      <%})%>
         </tbody>
       </table>
 </body>
