@@ -25,8 +25,9 @@
 
           <%professorsList.forEach(professor => {%>
           <tr>
-             
+              <td><%= professor.name %></td>
               <td><%= professor.hours %></td>
+              <td><%= professor.phone %></td>
 
           </tr>
       <%})%>

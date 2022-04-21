@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const ejs = require('ejs');
 const { kStringMaxLength } = require('buffer');
 const { name } = require('ejs');
+var mongo = require('mongodb');
 
 
 var MongoClient = require('mongodb').MongoClient;
@@ -42,9 +43,20 @@ app.get('/views/rayklump', (req, res) => {
 })
 
 app.get('/views/kim', (req, res) => {
-    var query = { name: "Dr. Ray Klump"};
-    Professors.findOne(query).then(result => res.send(result)).catch(err => console.log(err))
    
+
+      MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("OfficeDirectory");
+        var query = { name: "Dr. Ray Klump"};
+        dbo.collection("professors").find(query, { projection: { _id: 0, name: 0} }).toArray(function(err, result) {
+          if (err) throw err;
+          res.send(result);
+          console.log(result);
+          
+        });
+      });
+
 })
 
 
