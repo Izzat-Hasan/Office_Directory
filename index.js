@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const ejs = require('ejs');
 const { kStringMaxLength } = require('buffer');
 
-app.set('view engine', 'ejs');
 
 
 const port = process.env.PORT || 3000
@@ -25,8 +24,9 @@ const professorSchema = {
 }
 
 const Professors = mongoose.model('professors', professorSchema);
+app.set('view engine', 'ejs');
 
-app.get('/views', (req, res) => {
+app.get('/views/rayklump', (req, res) => {
     Professors.find({}, function(err, professors) {
         res.render('rayklump', {
             professorsList: professors
@@ -34,6 +34,13 @@ app.get('/views', (req, res) => {
     })
 })
 
+app.get('/views/kim', (req, res) => {
+  Professors.find({}, function(err, professors) {
+      res.render('kim', {
+          professorsList: professors
+      })
+  })
+})
 
 
 app.listen(port, () => console.log(
