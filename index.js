@@ -13,7 +13,7 @@ var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority';
 const client = new MongoClient(url);
 const dbName = "OfficeDirectory";
-mongoose.connect('mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority"');
 const db = mongoose.connection;
 const col = db.collection("professors");
 
@@ -34,17 +34,61 @@ app.get('/professors',ProfessorController.getAllProfessors, (req,res,next) => {
   res.render("professors",{professors:req.data});
 });
 
-app.get('/professors/pogue/:email',ProfessorController.getProfessor,(req,res,next) => {
-  res.render("professors",{professors:req.data});
-});
-
 app.get('/professors/klump/:email',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
 
+app.get('/professors/ramsey/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+
+app.get('/professors/dupre/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/martinez/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/szczurek/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/stephenson/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/howard/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/khasawneh/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/plass/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/aboumar/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/mkhassaweneh/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/dominiak/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/lewis/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/meyer/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+app.get('/professors/ngalamou/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
 app.get('/professors/perry/:email',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
+app.get('/professors/pogue/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+
+
 
 
 

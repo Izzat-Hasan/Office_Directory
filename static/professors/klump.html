@@ -17,7 +17,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-  
+    <title>Edit My information</title>
 
 
   </head>
@@ -33,6 +33,7 @@
     <h1 class = "title"> Edit My information </h1>
       <div class = "box">
         <!-- get name from database -->
+        <p id =nameFromDatabase>Name: </p> 
         <p>
           <span class=""item-label">Name:</span>
           <%= p.name %>
@@ -40,18 +41,11 @@
         <input id =editHours> 
         
         <!-- get hours from database -->
-
+        <p id =hoursFromDatabase>Hours: </p>
         <!-- prof would enter in the changed hours -->
-        <p>
-            <span class=""item-label">hours:</span>
-            <%= p.hours %>
-        </p>
         <input id =editHours> 
        
-        <p>
-            <span class=""item-label">Room:</span>
-            <%= p.roomnumber %>
-        </p>
+        <p id =roomFromDatabase>Room number: </p>
         <input id =editRoom> 
         
         <p id =emailFromDatabase>Email: </p>
@@ -61,10 +55,7 @@
       </p>
         <input id =editEmail> 
         
-        <p>
-            <span class=""item-label">Phone number:</span>
-            <%= p.roomnumber %>
-        </p>
+        <p id =phoneFromDatabase>Phone Number: </p>
         <input id =editPhone> 
         <button  class ="button" autofocus onclick="updateInfo()">update my information</button>
         
