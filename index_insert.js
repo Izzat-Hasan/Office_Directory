@@ -1,3 +1,10 @@
+const express = require('express')
+const app = express()
+const mongoose = require('mongoose');
+const ejs = require('ejs');
+const { kStringMaxLength } = require('buffer');
+const { name } = require('ejs');
+var mongo = require('mongodb');
 const { MongoClient } = require("mongodb");
  
 // Replace the following with your Atlas connection string                                                                                                                                        
@@ -48,6 +55,7 @@ const client = new MongoClient(url);
         const result = await col.insertMany(docs, options);
         console.log(`${result.insertedCount} documents were inserted`);
 
+        
          console.log(docs);
         
         } catch (err) {

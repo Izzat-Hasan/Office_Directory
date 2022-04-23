@@ -1,17 +1,20 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
+const ProfessorController = require("./controllers/ProfessorController");
 const ejs = require('ejs');
 const { kStringMaxLength } = require('buffer');
 const { name } = require('ejs');
 var mongo = require('mongodb');
+const Professor = require("./models/professor");
 
 
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority';
 const client = new MongoClient(url);
 const dbName = "OfficeDirectory";
-const db = client.db(dbName);
+mongoose.connect('mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority');
+const db = mongoose.connection;
 const col = db.collection("professors");
 
 const port = process.env.PORT || 3000
@@ -20,44 +23,28 @@ const minorVersion = 2
 
 app.use(express.static(__dirname + '/static'))
 
-mongoose.connect('mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority');
 
-const professorSchema = {
-    name: String,
-    hours: String,
-    email: String,
-    phone: String,
-    roomnumber: String,
-    website: String
-}
-
-const Professors = mongoose.model('professors', professorSchema);
 app.set('view engine', 'ejs');
 
-app.get('/views/rayklump', (req, res) => {
-    Professors.find({}, function(err, professors) {
-        res.render('rayklump', {
-            professorsList: professors
-        })
-    })
-})
+db.once("open", () => {
+  console.log("Connected to MongoDB");
+});
 
-app.get('/views/kim', (req, res) => {
-   
+app.get('/professors',ProfessorController.getAllProfessors, (req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
 
-      MongoClient.connect(url, function(err, db) {
-        if (err) throw err;
-        var dbo = db.db("OfficeDirectory");
-        var query = { name: "Dr. Ray Klump"};
-        dbo.collection("professors").find(query, { projection: { _id: 0, name: 0} }).toArray(function(err, result) {
-          if (err) throw err;
-          res.send(result);
-          console.log(result);
-          
-        });
-      });
+app.get('/professors/pogue/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
 
-})
+app.get('/professors/klump/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
+
+app.get('/professors/perry/:email',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("professors",{professors:req.data});
+});
 
 
 app.listen(port, () => console.log(

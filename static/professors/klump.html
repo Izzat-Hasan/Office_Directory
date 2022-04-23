@@ -1,0 +1,48 @@
+<!-- put space for a name at the top (ima try to get name from database) -->
+<!-- for right now, just put name -->
+
+<!--create a field for -->
+
+<!--name -->
+<!--hours -->
+<!--room number -->
+<!--email -->
+<!--phone number-->
+
+
+<!--then at the bottom create a button that will later do something -->
+<!--call it "update my information" -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit My information</title>
+
+
+  </head>
+ 
+
+  <body onload ="dicegame()" class = "container">
+    <h1 class = "title"> Edit My information </h1>
+      <div class = "box">
+        <!-- get name from database -->
+        <p id =nameFromDatabase>Name: </p> 
+        <input id =editHours> 
+        
+        <!-- get hours from database -->
+        <p id =hoursFromDatabase>Hours: </p>
+        <!-- prof would enter in the changed hours -->
+        <input id =editHours> 
+       
+        <p id =roomFromDatabase>Room number: </p>
+        <input id =editRoom> 
+        
+        <p id =emailFromDatabase>Email: </p>
+        <input id =editEmail> 
+        
+        <p id =phoneFromDatabase>Phone Number: </p>
+        <input id =editPhone> 
+        <button  class ="button" autofocus onclick="updateInfo()">update my information</button>
+        
+      </div>
