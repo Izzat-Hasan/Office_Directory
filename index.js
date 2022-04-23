@@ -91,14 +91,6 @@ app.get('/professors/pogue/:email',ProfessorController.getProfessor,(req,res,nex
 
 
 
-
-
-//mikes shit here
-app.get('/cards/professors/perry/:email',ProfessorController.getProfessor,(req,res,next) => {
-  res.render("professors",{professors:req.data});
-});
-
-
 app.listen(port, () => console.log(
   `Express started at \"http://localhost:${port}\"\n` +
   `press Ctrl-C to terminate.`)
