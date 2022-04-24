@@ -35,7 +35,7 @@ const client = new MongoClient(url);
                 { name: "Dr. Cynthia Howard", hours: "Tuesday, Thursday 10:00am - 12:00pm", roomnumber: "N/A", email: "howardcy@lewisu.edu", phone: "N/A", website: "N/A"},
                 { name: "Dr. Rami Khasawneh", hours: "Tuesday, Wednesday 4:00pm - 8:00pm", roomnumber: "N/A", email: "khasawra@lewisu.edu" , phone: "N/A", website: "N/A"},
                 { name: "Dr. Mathias Plass", hours: "Monday 10:00am - 12:00pm + 1:00pm - 2:00pm, Tuesday 12:00pm - 4:00pm, Wednesday 10:00am - 12:00pm + 1:00pm - 2:00pm, Friday 10:00am - 12:00pm + 1:00pm - 2:00pm + 3:00pm - 4:00pm", roomnumber: "N/A", email: "plassma@lewisu.edu" , phone: "N/A", website: "N/A"},
-                { name: "Dr. Sam Aboumar", hours: "N/A", roomnumber: "N/A", email: "oabuomar@lewisu.edu" , phone: "N/A", website: "N/A"} ,
+                { name: "Dr. Sam Aboumar", hours: "N/A", roomnumber: "N/A", email: "" , phone: "N/A", website: "N/A"} ,
                 { name: "Dr. Mahmood Al-khassaweneh", hours: "N/A", roomnumber: "N/A", email: "malkhassaweneh@lewisu.edu" , phone: "N/A", website: "N/A"},
                 { name: "Dr. Dana Dominiak", hours: "N/A", roomnumber: "N/A", email: "dominida@lewisu.edu" , phone: "N/A", website: "N/A"},
                 { name: "Dr. Michael Lewis", hours: "N/A", roomnumber: "N/A", email: "mlewis8@lewisu.edu" , phone: "N/A", website: "N/A"},
