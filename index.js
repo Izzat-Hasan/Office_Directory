@@ -33,7 +33,9 @@ db.once("open", () => {
 app.get('/professors',ProfessorController.getAllProfessors, (req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-
+//Katie and Izzys spot for our authentification linked pages
+//this always directs to views/professors.ejs
+//when you log in, will direct you to your link
 app.get('/professors/klump/:email',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
