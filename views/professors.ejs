@@ -69,8 +69,10 @@
         <button  class ="button" autofocus onclick="updateInfo()">update my information</button>
         
       </div>
-
+<!-- add confirm value box to show info was updated-->
       <% }); %>
+
+      
     </div>
   </div>
 
@@ -80,45 +82,26 @@
 <script>
 function updateInfo(){
     //insert function to update profs info
-}
+    const name = document.getElementById("editName").value;
+		const phone = document.getElementById("editPhone").value;
+    const hours = document.getElementById("editHours").value;
+    const roomnumber = document.getElementById("editRoom").value;
+    //const website = document.getElementById("editWebsite").value;
 
-function nameFromDatabase(){
-    //get info from database
-}
+    
+    const fetchString = "/update-Info?name="+name+"&phone="+phone+"&hours"+hours+"&roomnumber"+roomnumber
+		const response = await fetch(fetchString)
+    const responseText = await response.text()
+		document.getElementById("confirm").value = responseText
 
-function hoursFromDatabase(){
-    //get info from database
-}
+    Professor.updateOne(query, newValue, (error,professors) => {
+        if (error) next(error);
+        //req.data = professors;
+        next();
+    });
+	}
 
-function editName(){
-    var hoursEdit = document.getElementById("myInput").value;
-}
 
-function editHours(){
-    var hoursEdit = document.getElementById("myInput").value;
-}
-
-function roomFromDatabase(){
-    //get info from database
-}
-
-function editRoom(){
-    var roomEdit = document.getElementById("myInput").value;
-}
-function emailFromDatabase(){
-    //get info from database
-}
-
-function editEmail(){
-    var emailEdit = document.getElementById("myInput").value;
-}
-function phoneFromDatabase(){
-    //get info from database
-}
-
-function editPhone(){
-    var phoneEdit = document.getElementById("myInput").value;
-}
 
 </script>
 
