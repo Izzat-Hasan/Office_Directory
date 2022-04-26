@@ -7,8 +7,7 @@ const { kStringMaxLength } = require('buffer');
 const { name } = require('ejs');
 var mongo = require('mongodb');
 const Professor = require("./models/professor");
-const Update = require("./controllers/update");
-var url = require('url');
+
 
 
 var MongoClient = require('mongodb').MongoClient;
@@ -38,32 +37,6 @@ app.get('/professors',ProfessorController.getAllProfessors, (req,res,next) => {
 //Katie and Izzys spot for our authentification linked pages
 //this always directs to views/professors.ejs
 //when you log in, will direct you to your link
-
-//update info trial
-
-//delete professor and POST new one???
-app.get('/updateInfo', ProfessorController.updateProfessor, (req,res) => {
-  console.log('Calling "/updateinfo" on the Node.js server.')
-  var inputs = url.parse(request.url, true).query
-  let name = inputs.name
-	let phone = inputs.phone
-  let hours = inputs.hours
-  let roomnumber = inputs.roomnumber
-  //let website = inputs.website
-
-  Professor.updateProfessor()
-  response.send('i hate myself')
-});
-
-
-//update trial 2
-app.get('/professors/klump/:email',ProfessorController.updateProfessorKlump,(req,res,next) => {
-  
-});
-
-
-
-
 
 app.get('/professors/klump/:email',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
