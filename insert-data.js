@@ -1,4 +1,7 @@
 const { MongoClient } = require("mongodb");
+ //DO NOT RUN THIS
+ //ONLY NEEDS TO BE RAN ONCE
+
  
 // Replace the following with your Atlas connection string                                                                                                                                        
 const url = "mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority";
