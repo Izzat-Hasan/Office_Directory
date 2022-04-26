@@ -1,316 +1,119 @@
 <!DOCTYPE html>
-<!-- Template Designed by Izzat Hasan 
-Resources:  www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Main Display Page </title>
     <link rel="stylesheet" href="style.css">
-    <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Information </title>
    </head>
-<body>
+   <body>
+     <div class="card">
+       <div class="card-header">
+        <img src="https://i.ibb.co/sPwBdFN/klump.png" alt="klump" class="prof-pic"/></a>
+       </div>
 
-  <div class="sidebar close">
-    <div class="logo-details">
-        <i class='bx bxs-plane-alt' ></i>
-        <!-- Still working on getting lewis logo here-->
-      <span class="logo_name">LEWIS</span>
-    </div>
+      <div class="card-body">
+        <p class="prof-name">Sample Name</p>
+        <a href="#" class="mail">sampleaddress@gmail.com</a>
+        <p class="office-hours">Sample Office Hours Info Here</p>
+      </div>
 
-  
-    <ul class="nav-links">
-      <li>
-        <!-- link to the login page goes here-->
-        <a href="login.html">
-            <i class='bx bxs-log-in'></i>
-          <span class="link_name">Login</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">log-in</a></li>
-        </ul>
-      </li>
-  
-      <li>
-        <div class="iocn-link">
-        <!-- link to office directory search page goes here-->
-          <a href="main.html">
-            <i class='bx bxs-home' ></i>
-            <span class="link_name">Main</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">main</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        
-        <a href="setting.html">
-          <i class='bx bx-cog' ></i>
-          <span class="link_name">Setting</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-        </ul>
-      </li>
-      <li>
-
-        <a href="about.html">
-          <i class="bx bx-rocket"></i>
-          <span class="link_name">About</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">About</a></li>
-        </ul>
-      </li>
-    </li>
-</ul>
-  </div>
-
-  <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Main</span>
-    </div>
-    
-  <script src="script.js"></script>
-</body>
-<style>/* Google Fonts Import Link */
+      <div class="card-footer">
+        <p class="bottom-text"><span>Office Directory</span></p>
+      </div>
+     </div>
+   </body>
+   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    .sidebar{
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 260px;
-      background: #a10d0d;
-      z-index: 100;
-      transition: all 0.5s ease;
-    }
-    .sidebar.close{
-      width: 78px;
-    }
-    .sidebar .logo-details{
-      height: 60px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-    }
-    .sidebar .logo-details i{
-      font-size: 30px;
-      color: #fff;
-      height: 50px;
-      min-width: 78px;
-      text-align: center;
-      line-height: 50px;
-    }
-    .sidebar .logo-details .logo_name{
-      font-size: 22px;
-      color: #fff;
-      font-weight: 600;
-      transition: 0.3s ease;
-      transition-delay: 0.1s;
-    }
-    .sidebar.close .logo-details .logo_name{
-      transition-delay: 0s;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .sidebar .nav-links{
-      height: 100%;
-      padding: 30px 0 150px 0;
-      overflow: auto;
-    }
-    .sidebar.close .nav-links{
-      overflow: visible;
-    }
-    .sidebar .nav-links::-webkit-scrollbar{
-      display: none;
-    }
-    .sidebar .nav-links li{
-      position: relative;
-      list-style: none;
-      transition: all 0.4s ease;
-    }
-    .sidebar .nav-links li:hover{
-      background: #1d1b31;
-    }
-    .sidebar .nav-links li .iocn-link{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .sidebar.close .nav-links li .iocn-link{
-      display: block
-    }
-    .sidebar .nav-links li i{
-      height: 50px;
-      min-width: 78px;
-      text-align: center;
-      line-height: 50px;
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .sidebar .nav-links li.showMenu i.arrow{
-      transform: rotate(-180deg);
-    }
-    .sidebar.close .nav-links i.arrow{
-      display: none;
-    }
-    .sidebar .nav-links li a{
-      display: flex;
-      align-items: center;
       text-decoration: none;
+      transition: 0.3s;
     }
-    .sidebar .nav-links li a .link_name{
-      font-size: 18px;
-      font-weight: 400;
-      color: #fff;
-      transition: all 0.4s ease;
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #802a33;
+      color: #fdfdfd;
     }
-    .sidebar.close .nav-links li a .link_name{
-      opacity: 0;
-      pointer-events: none;
-    }
-    .sidebar .nav-links li .sub-menu{
-      padding: 6px 6px 14px 80px;
-      margin-top: -10px;
-      background: #1d1b31;
-      display: none;
-    }
-    .sidebar .nav-links li.showMenu .sub-menu{
-      display: block;
-    }
-    .sidebar .nav-links li .sub-menu a{
-      color: #fff;
-      font-size: 15px;
-      padding: 5px 0;
-      white-space: nowrap;
-      opacity: 0.6;
-      transition: all 0.3s ease;
-    }
-    .sidebar .nav-links li .sub-menu a:hover{
-      opacity: 1;
-    }
-    .sidebar.close .nav-links li .sub-menu{
-      position: absolute;
-      left: 100%;
-      top: -10px;
-      margin-top: 0;
-      padding: 10px 20px;
-      border-radius: 0 6px 6px 0;
-      opacity: 0;
-      display: block;
-      pointer-events: none;
-      transition: 0s;
-    }
-    .sidebar.close .nav-links li:hover .sub-menu{
-      top: 0;
-      opacity: 1;
-      pointer-events: auto;
-      transition: all 0.4s ease;
-    }
-    .sidebar .nav-links li .sub-menu .link_name{
-      display: none;
-    }
-    .sidebar.close .nav-links li .sub-menu .link_name{
-      font-size: 18px;
-      opacity: 1;
-      display: block;
-    }
-    .sidebar .nav-links li .sub-menu.blank{
-      opacity: 1;
-      pointer-events: auto;
-      padding: 3px 20px 6px 16px;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .sidebar .nav-links li:hover .sub-menu.blank{
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    
-    .home-section{
-      position: relative;
-      background: #E4E9F7;
-      height: 100vh;
-      left: 260px;
-      width: calc(100% - 260px);
-      transition: all 0.5s ease;
-    }
-    .sidebar.close ~ .home-section{
-      left: 78px;
-      width: calc(100% - 78px);
-    }
-    .home-section .home-content{
-      height: 60px;
-      display: flex;
-      align-items: center;
-    }
-    .home-section .home-content .bx-menu,
-    .home-section .home-content .text{
-      color: #11101d;
-      font-size: 35px;
-    }
-    .home-section .home-content .bx-menu{
-      margin: 0 15px;
-      cursor: pointer;
-    }
-    .home-section .home-content .text{
-      font-size: 26px;
-      font-weight: 600;
-    }
+
     .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  text-align: center;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-    @media (max-width: 420px) {
-      .sidebar.close .nav-links li .sub-menu{
-        display: none;
-      }
+      max-width: 512px;
+      margin: 350px auto 0;
+      background-color: #c0c0c0;
+      box-shadow: 0 10px 90px #00000024;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 15px;
     }
 
-    /* Adding imagine properties for prof views*/
-img {
-    border-radius: 50%;
-    border: 5px solid rgb(0, 0, 0);
-}
-    </style>
-<script>
-let arrow = document.querySelectorAll(".arrow");
-    for (var i = 0; i < arrow.length; i++) {
-      arrow[i].addEventListener("click", (e)=>{
-     let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-     arrowParent.classList.toggle("showMenu");
-      });
+    .card .card-header {
+      height: 128px;
+      position: relative;
     }
+
+    .card .card-header .prof-pic {
+      width: 256px;
+      height: 256px;
+      border-radius: 1000px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 8px solid #000000;
+      box-shadow: 0 0 20px #00000033;
+    }
+
+    .card .card-header .prof-pic:hover {
+      width: 180px;
+      height: 180px;
+      border: 8px solid #802a33;
+    }
+
+    .card .card-body {
+      padding: 10px 40px;
+    }
+
+    .card .card-body .prof-name {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .card .card-body .prof-name:hover {
+      margin-top: 30px;
+      font-size: 26px;
+      color: #802a33;
+    }
+
+    .card .card-body .mail {
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .card .card-body .mail:hover {
+      font-size: 16px;
+      color: #802a33;
+    }
+
+    .card .card-body .office-hours {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #000000;
+    }
+
     
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".bx-menu");
-    console.log(sidebarBtn);
-    sidebarBtn.addEventListener("click", ()=>{
-      sidebar.classList.toggle("close");
-    });
-    </script>
-</html>
+    .card .card-footer {
+        background-color: #7a1111;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 20px 0 20px 0;
+    }
+
+    .card .card-footer .count {
+        font-size: 14px;
+    }
+
+   </style>
+</html> 
