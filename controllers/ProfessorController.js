@@ -6,6 +6,7 @@ exports.getAllProfessors = (req,res,next) => {
         next();
     });
 };
+
 exports.getProfessor = (req,res,next) => {
     Professor.find({"email":req.params["email"]},(error,professors) => {
         if (error) next(error);
