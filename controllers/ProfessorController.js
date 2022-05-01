@@ -15,10 +15,16 @@ exports.getProfessor = (req,res,next) => {
     });
 }
 
-exports.updateProfessorKlump = (req,res,next) => {
-    Professor.findOneAndUpdate({"email":req.params["email"]}, newValue, (error,professors) => {
+exports.saveProfessor = (req, res) => {
+    //res.send(req.body); /*
+    Professor.find({"name":req.body.name},(error,professors) => {
         if (error) next(error);
-        req.data = professors;
-        next();
+        //res.send(professors[0]);
+        professors[0].name = req.body.name;
+        professors[0].email = req.body.email;
+        professors[0].save((error, result) => {
+            if(error) res.send(error);
+            res.render("thanks");
+        });
     });
-}
+};

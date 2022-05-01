@@ -1,0 +1,20 @@
+<div class=""list-container">
+    <% professors.forEach(p => { %>
+        <div>
+            <form action="/saveprof" method="POST">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="<%= p.name %>"><br></br>
+
+                
+
+                <label for="email">Email</label>
+                <input type="text" name="email" value="<%= p.email %>">
+
+                <p> </p>
+
+                <input type="submit" value="Submit" class="button">
+
+            </form>
+        </div>
+    <% }); %>
+    </div>

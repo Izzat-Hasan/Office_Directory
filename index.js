@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+var bodyParser = require('body-parser');
+app.use(express.json());
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 const mongoose = require('mongoose');
 const ProfessorController = require("./controllers/ProfessorController");
 const ejs = require('ejs');
@@ -9,12 +13,11 @@ var mongo = require('mongodb');
 const Professor = require("./models/professor");
 
 
-
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority';
 const client = new MongoClient(url);
 const dbName = "OfficeDirectory";
-mongoose.connect('mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority"');
+mongoose.connect('mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority');
 const db = mongoose.connection;
 const col = db.collection("professors");
 
@@ -23,7 +26,6 @@ const majorVersion = 1
 const minorVersion = 2
 
 app.use(express.static(__dirname + '/static'))
-
 
 app.set('view engine', 'ejs');
 
@@ -34,6 +36,14 @@ db.once("open", () => {
 app.get('/professors',ProfessorController.getAllProfessors, (req,res,next) => {
   res.render("professors",{professors:req.data});
 });
+
+app.get('/professors/edit/:name',ProfessorController.getProfessor,(req,res,next) => {
+  res.render("editprof",{professors:req.data});
+});
+
+app.post("/saveprof", ProfessorController.saveProfessor);
+
+
 //Katie and Izzys spot for our authentification linked pages
 //this always directs to views/professors.ejs
 //when you log in, will direct you to your link
