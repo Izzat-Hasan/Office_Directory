@@ -8,13 +8,12 @@ exports.getAllProfessors = (req,res,next) => {
 };
 
 exports.getProfessor = (req,res,next) => {
-    Professor.find({"email":req.params["email"]},(error,professors) => {
+    Professor.find({"name":req.params["name"]},(error,professors) => {
         if (error) next(error);
         req.data = professors;
         next();
     });
-}
-
+};
 exports.saveProfessor = (req, res) => {
     //res.send(req.body); /*
     Professor.find({"name":req.body.name},(error,professors) => {

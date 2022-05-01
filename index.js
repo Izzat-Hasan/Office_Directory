@@ -106,83 +106,83 @@ app.get('/professors/pogue/:email',ProfessorController.getProfessor,(req,res,nex
 //in the views folder, to every file EXCEPT professors.ejs
 
 
-app.get('/aboumar/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/aboumar/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("aboumar",{professors:req.data});
 });
 
-app.get('/al-khassaweneh/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/al-khassaweneh/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("al-khassaweneh",{professors:req.data});
 });
 
-app.get('/dominiak/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/dominiak/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("dominiak",{professors:req.data});
 });
 
-app.get('/dupre/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/dupre/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("dupre",{professors:req.data});
 });
 
-app.get('/harsy/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/harsy/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("harsy",{professors:req.data});
 });
 
-app.get('/howard/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/howard/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("howard",{professors:req.data});
 });
 
-app.get('/khasawneh/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/khasawneh/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("khasawneh",{professors:req.data});
 });
 
-app.get('/kim/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/kim/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("kim",{professors:req.data});
 });
 
-app.get('/lewis/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/lewis/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("lewis",{professors:req.data});
 });
 
-app.get('/martinez/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/martinez/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("martinez",{professors:req.data});
 });
 
-app.get('/meyer/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/meyer/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("meyer",{professors:req.data});
 });
 
-app.get('/ngalamou/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/ngalamou/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("ngalamou",{professors:req.data});
 });
 
-app.get('/omari/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/omari/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("omari",{professors:req.data});
 });
 
-app.get('/perry/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/perry/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("perry",{professors:req.data});
 });
 
-app.get('/plass/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/plass/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("plass",{professors:req.data});
 });
 
-app.get('/pogue/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/pogue/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("pogue",{professors:req.data});
 });
 
-app.get('/rayklump/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/rayklump/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("rayklump",{professors:req.data});
 });
 
-app.get('/smith/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/smith/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("smith",{professors:req.data});
 });
 
-app.get('/stephenson/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/stephenson/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("stephenson",{professors:req.data});
 });
 
-app.get('/szczurek/professors/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/szczurek/professors/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("szczurek",{professors:req.data});
 });
 
