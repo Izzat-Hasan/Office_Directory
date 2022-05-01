@@ -48,57 +48,57 @@ app.post("/saveprof", ProfessorController.saveProfessor);
 //this always directs to views/professors.ejs
 //when you log in, will direct you to your link
 
-app.get('/professors/klump/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/klump/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
 
-app.get('/professors/ramsey/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/ramsey/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
 
-app.get('/professors/dupre/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/dupre/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/martinez/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/martinez/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/szczurek/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/szczurek/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/stephenson/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/stephenson/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/howard/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/howard/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/khasawneh/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/khasawneh/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/plass/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/plass/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/aboumar/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/aboumar/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/mkhassaweneh/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/mkhassaweneh/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/dominiak/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/dominiak/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/lewis/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/lewis/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/meyer/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/meyer/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/ngalamou/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/ngalamou/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/perry/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/perry/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
-app.get('/professors/pogue/:email',ProfessorController.getProfessor,(req,res,next) => {
+app.get('/professors/pogue/:name',ProfessorController.getProfessor,(req,res,next) => {
   res.render("professors",{professors:req.data});
 });
 
