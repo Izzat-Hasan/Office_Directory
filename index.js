@@ -12,6 +12,49 @@ const { name } = require('ejs');
 var mongo = require('mongodb');
 const Professor = require("./models/professor");
 
+//authentication
+passport = require("passport")
+LocalStrategy = require("passport-local")
+passportLocalMongoose =
+		require("passport-local-mongoose"),
+	User = require("./models/user");
+
+  app.use(require("express-session")({
+    secret: "Rusty is a dog",
+    resave: false,
+    saveUninitialized: false
+  }));
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+//Showing login form
+app.get("/login", function (req, res) {
+	res.render("login");
+});
+
+//Handling user login
+app.post("/login", passport.authenticate("local", {
+	successRedirect: "/secret",
+	failureRedirect: "/login"
+}), function (req, res) {
+});
+
+//Handling user logout
+app.get("/logout", function (req, res) {
+	req.logout();
+	res.redirect("/");
+});
+
+function isLoggedIn(req, res, next) {
+	if (req.isAuthenticated()) return next();
+	res.redirect("/login");
+}
 
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority';
