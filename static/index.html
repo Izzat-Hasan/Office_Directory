@@ -11,7 +11,72 @@ Resources:  www.youtube.com/codinglabyt -->
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+ 
+  <div class="sidebar close">
+    <div class="logo-details">
+        <i class='bx bxs-plane-alt' ></i>
+        <!-- Still working on getting lewis logo here-->
+      <span class="logo_name">LEWIS</span>
+    </div>
+    
 
+  
+    <ul class="nav-links">
+      <li>
+        <!-- link to the login page goes here-->
+        <a href="login.html">
+            <i class='bx bxs-log-in'></i>
+          <span class="link_name">Login</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Login</a></li>
+        </ul>
+      </li>
+  
+      <li>
+        <div class="iocn-link">
+        <!-- link to office directory search page goes here-->
+          <a href="main.html">
+            <i class='bx bxs-home' ></i>
+            <span class="link_name">Main</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Main</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        
+        <a href="setting.html">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Settings</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Settings</a></li>
+        </ul>
+      </li>
+
+      <li>
+
+      <a href="about.html">
+        <i class="bx bx-rocket"></i>
+        <span class="link_name">About</span>
+      </a>
+      <ul class="sub-menu blank">
+        <li><a class="link_name" href="#">About</a></li>
+      </ul>
+    </li>
+  </li>
+  
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      
+      <i class='bx bx-menu' ></i>
+    <span class="text">Office Hours Directory</span> 
+    
+    </div>
   <div class="slideshow-container">
     <!-- The dots/circles -->
   <div style="text-align:center">
@@ -115,70 +180,10 @@ Resources:  www.youtube.com/codinglabyt -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-  <div class="sidebar close">
-    <div class="logo-details">
-        <i class='bx bxs-plane-alt' ></i>
-        <!-- Still working on getting lewis logo here-->
-      <span class="logo_name">LEWIS</span>
-    </div>
+
 
   
-    <ul class="nav-links">
-      <li>
-        <!-- link to the login page goes here-->
-        <a href="login.html">
-            <i class='bx bxs-log-in'></i>
-          <span class="link_name">Login</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Login</a></li>
-        </ul>
-      </li>
-  
-      <li>
-        <div class="iocn-link">
-        <!-- link to office directory search page goes here-->
-          <a href="main.html">
-            <i class='bx bxs-home' ></i>
-            <span class="link_name">Main</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Main</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        
-        <a href="setting.html">
-          <i class='bx bx-cog' ></i>
-          <span class="link_name">Settings</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Settings</a></li>
-        </ul>
-      </li>
-
-      <li>
-
-      <a href="about.html">
-        <i class="bx bx-rocket"></i>
-        <span class="link_name">About</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">About</a></li>
-      </ul>
-    </li>
-  </li>
-  
-</ul>
-  </div>
-  <section class="home-section">
-    <div class="home-content">
-      
-      <i class='bx bx-menu' ></i>
-    <span class="text">Office Hours Directory</span> 
     
-    </div>
   </section>
 
   <script src="script.js"></script>
@@ -350,7 +355,7 @@ Resources:  www.youtube.com/codinglabyt -->
     .home-section{
       position:relative;
       background: #E4E9F7;
-      height: 100vh;
+      height: 100%;
       left: 260px;
       width: calc(100% - 260px);
       transition: all 0.5s ease;
