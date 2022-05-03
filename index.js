@@ -13,6 +13,7 @@ var mongo = require('mongodb');
 const Professor = require("./models/professor");
 
 //authentication
+/*
 passport = require("passport")
 LocalStrategy = require("passport-local")
 passportLocalMongoose =
@@ -55,7 +56,7 @@ function isLoggedIn(req, res, next) {
 	if (req.isAuthenticated()) return next();
 	res.redirect("/login");
 }
-
+*/
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb+srv://lewisTeam:lewis123@information.puksi.mongodb.net/OfficeDirectory?retryWrites=true&w=majority';
 const client = new MongoClient(url);
